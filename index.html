@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>LOUYIXUAN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="stage">
+
+  <!-- ===== 页面层（严格使用五张设计稿原图，无任何额外视觉元素） ===== -->
+
+  <!-- 图1：首页 -->
+  <section class="page" id="page1">
+    <img class="layer" src="assets/slide1.webp" alt="">
+  </section>
+
+  <!-- 图2：用户弹窗页 -->
+  <section class="page" id="page2">
+    <img class="layer" src="assets/slide2.webp" alt="">
+  </section>
+
+  <!-- 图3：音乐播放页 -->
+  <section class="page" id="page3">
+    <img class="layer" src="assets/slide3.webp" alt="">
+  </section>
+
+  <!-- 图4：地图飞机页（含无飞机底图与飞机切图） -->
+  <section class="page" id="page4">
+    <img class="layer" src="assets/slide4.webp" alt="">
+    <img class="layer" id="cleanBase" src="assets/slide4_base.webp" alt="">
+    <img id="plane" src="assets/plane.png" alt="">
+  </section>
+
+  <!-- 图5：换装小游戏页（含脸部表情切图） -->
+  <section class="page" id="page5">
+    <img class="layer" src="assets/slide5.webp" alt="">
+    <img id="faceLayer" src="assets/face_3.png" alt="">
+  </section>
+
+  <!-- ===== 交互热区（透明，无任何视觉呈现） ===== -->
+
+  <!-- 左侧竖排六个图标 -->
+  <div class="hot icon" data-act="none" style="top:1.1%"></div>
+  <div class="hot icon" data-act="p2"   style="top:18.4%"></div>
+  <div class="hot icon" data-act="p3"   style="top:32.7%"></div>
+  <div class="hot icon" data-act="p4"   style="top:49.4%"></div>
+  <div class="hot icon" data-act="p1"   style="top:62.5%"></div>
+  <div class="hot icon" data-act="p5"   style="top:78.9%"></div>
+
+  <!-- 图3 下部三张专辑封面：热区按设计稿实测轮廓裁剪（梯形，贴合倾斜卡片可见区） -->
+  <div class="hot cover" data-track="assets/track1.wav"
+       style="left:26.5%;top:82.5%;width:12.0%;height:17.5%;z-index:13;
+              clip-path:polygon(43% 0%,100% 0%,64% 100%,4% 100%)"></div>
+  <div class="hot cover" data-track="assets/track2.wav"
+       style="left:33.0%;top:66.0%;width:36.0%;height:34.0%;z-index:14;
+              clip-path:polygon(19.4% 0%,75% 0%,98% 47%,76% 50%,88% 100%,6% 100%)"></div>
+  <div class="hot cover" data-track="assets/track3.wav"
+       style="left:59.5%;top:82.5%;width:15.0%;height:17.5%;z-index:15;
+              clip-path:polygon(1% 0%,66% 0%,95% 100%,34% 100%)"></div>
+
+  <!-- 图5 右侧四个表情方块（按设计稿浅色方块实测边界） -->
+  <div class="hot expr" data-face="1" style="left:70.83%;top:54.54%;width:9.64%;height:17.13%"></div>
+  <div class="hot expr" data-face="2" style="left:80.99%;top:54.54%;width:9.63%;height:17.13%"></div>
+  <div class="hot expr" data-face="3" style="left:70.83%;top:72.59%;width:9.64%;height:17.13%"></div>
+  <div class="hot expr" data-face="4" style="left:80.99%;top:72.59%;width:9.63%;height:17.13%"></div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
